@@ -1,0 +1,38 @@
+@use './vars' as *;
+
+.button {
+    outline: none;
+    border: none;
+    font-family: inherit;
+    color: #547E8F;
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    cursor: pointer;
+
+    &--red{
+        color: $color--red;
+        &:hover {
+            color: #6366f1;
+        }
+    }
+
+    &--bold {
+        font-weight: 500;
+    }
+
+    // &--bluered {
+    //     color: linear-gradient(90deg, rgba(230,53,85,0.19371498599439774) 0%, rgba(53,178,230,0.07886904761904767) 100%);
+    // }
+
+    // &--white {
+    //     color: $color--white;  
+    // }
+
+    // &--black{
+    //     font-weight: 500;
+    //     color: #547E8F;
+    // }
+
+    // &--purple {
+    //     color: $color--purple;  
+    // }
+}

@@ -1,0 +1,61 @@
+@use './vars' as *; 
+
+.navigation {
+    padding: 2rem;
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 10;
+    //Responsive
+    @media screen and (max-width: 600px) {
+        button {
+            display: none;
+        }
+
+        .nav-items{
+            flex: 1;
+        }
+    }
+}
+
+.nav-items {
+    padding: 0.6rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+    background: #9163E6;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 64px;
+
+    &__item {
+        > a{
+            color: #313538;
+            transition: color 0.3s ease-in-out;
+
+            font-weight: 500;
+            font-size: clamp(0.8rem, 3vw, 1.25rem);
+
+            &:hover {
+                color: $color--grey-dark;
+            }
+        }
+
+        &:first-child, &:last-child{
+            margin: 0 1.4rem;
+        }
+    }
+}
+
+.active-menu {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.15);
+    > a {
+        color: $color--grey-dark !important;
+    }
+}
